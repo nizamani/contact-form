@@ -12,13 +12,13 @@ This is a simple contact form built using Next.js. The form allows users to subm
 
 ## Demo
 
-Check out the live demo: [Contact Form App](https://your-vercel-app-url.vercel.app)
+Check out the live demo: [Contact Form App](https://contactform-lime.vercel.app/)
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/contact-form-app.git
+   git clone git@github.com:nizamani/contact-form.git
    cd contact-form-app
    ```
 
