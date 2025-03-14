@@ -45,11 +45,11 @@ export default function FormSection() {
         </h1>
         <form className="flex flex-col gap-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <InputField label="First Name" name="firstname" type="text" placeholder="First name" />
-            <InputField label="Last Name" name="lastname" type="text" placeholder="Last name" />
-            </div>
-            <InputField label="Email" type="email" name="email" placeholder="Your email address" />
-            <PhoneField />
+              <InputField label="First Name" name="firstname" type="text" placeholder="First name" />
+              <InputField label="Last Name" name="lastname" type="text" placeholder="Last name" />
+              </div>
+              <InputField label="Email" type="email" name="email" placeholder="Your email address" />
+              <PhoneField label="Phone Number" />
             <div>
             <label className="block text-sm font-normal mb-1">Comments</label>
             <textarea
