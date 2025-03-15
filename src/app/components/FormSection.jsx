@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { showSuccessToast, showErrorToast } from "./CustomToast";
 import InputField from './InputField';
 import PhoneField from './PhoneField';
 import CheckboxGroup from './CheckboxGroup';
@@ -29,9 +30,16 @@ export default function FormSection() {
       body: JSON.stringify(data),
     });
 
+    // success case
     if (response.ok) {
       setSuccess(true);
+      showSuccessToast("Form submitted successfully!");
+    } else {
+      // Parse JSON response
+        const responseData = await response.json();
+        showErrorToast(responseData.message || "Something went wrong");
     }
+
     setLoading(false);
   };
 
@@ -63,11 +71,11 @@ export default function FormSection() {
             <CheckboxGroup
                 options={
                   [
-                    {label: "Website design", value: "website_design"},
-                    {label: "Content creation", value: "content_creation"},
-                    {label: "UI/UX design", value: "ui_ux_design"},
-                    {label: "Strategy & research", value: "strategy_research"},
-                    {label: "App design", value: "app_design"},
+                    {label: "Website design", value: "websitedesign"},
+                    {label: "Content creation", value: "contentcreation"},
+                    {label: "UI/UX design", value: "uiuxdesign"},
+                    {label: "Strategy & research", value: "strategyresearch"},
+                    {label: "App design", value: "appdesign"},
                     {label: "Other", value: "other"},
                   ]
                 }
@@ -78,7 +86,7 @@ export default function FormSection() {
             className={`w-full mt-4 py-3 rounded-lg flex items-center justify-center gap-2 ${
               loading ? 'bg-gray-500' : success ? 'bg-green-800' : 'bg-black'
             } text-white`}
-            disabled={loading}
+            disabled={loading | success}
           >
             {loading ? 'Loading...' : success ? 'Matched' : 'Get matched'}
           </button>

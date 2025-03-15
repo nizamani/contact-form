@@ -1,0 +1,16 @@
+.custom-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;  /* Ensure it doesn’t shrink */
+    min-height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+  
+  .custom-checkbox:checked {
+    background-color: black;
+    border-color: black;
+  }
