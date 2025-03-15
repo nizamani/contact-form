@@ -39,9 +39,9 @@ export default function FormSection() {
     // Left Side: Form
     <div className="w-full lg:w-[45%] px-6 py-6 flex flex-col justify-start" onSubmit={handleSubmit}>
         <div className="text-lg font-bold mb-8">🔳 Remote Devs</div>
-        <div className="px-10 md:px-20 py-10">
+        <div className="px-6 md:px-20 py-10">
         <h1 className="text-xl font-bold mb-9">
-            Get matched with the perfect freelancer for your design project
+            Get matched with the perfect freelancer
         </h1>
         <form className="flex flex-col gap-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
